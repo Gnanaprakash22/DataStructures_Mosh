@@ -10,13 +10,7 @@ public class Array {
     }
 
     public void insert(int number){
-        if(isResizeRequired()){
-            int []newNumbers=new int[numbers.length*2];
-            for(int i=0;i<numbers.length;i++){
-                newNumbers[i]=numbers[i];
-            }
-            numbers=newNumbers;
-        }
+        resizeIfRequired();
         numbers[count++]=number;
     }
 
@@ -87,12 +81,7 @@ public class Array {
         if(isIndexOutOfRange(index))
             throw new RuntimeException("Index is out of range");
 
-        int []newNumbers=new int[numbers.length*2];
-        for(int i=0;i<numbers.length;i++){
-            newNumbers[i]=numbers[i];
-        }
-        numbers=newNumbers;
-
+        resizeIfRequired();
         for(int i=count-1;i>=index;i--){
             numbers[i+1]=numbers[i];
         }
@@ -100,7 +89,13 @@ public class Array {
         count++;
     }
 
-    private boolean isResizeRequired() {
-        return count == numbers.length;
+    private void resizeIfRequired() {
+        if(count == numbers.length){
+            int []newNumbers=new int[numbers.length*2];
+            for(int i=0;i<numbers.length;i++){
+                newNumbers[i]=numbers[i];
+            }
+            numbers=newNumbers;
+        }
     }
 }
