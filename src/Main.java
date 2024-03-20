@@ -1,4 +1,3 @@
-import arrays.Array;
 import linkedlist.LinkedList;
 
 import java.util.Arrays;
@@ -38,7 +37,7 @@ public class Main {
         list.addFirst(70);
         list.deleteFirst();
         list.deleteLast();
-        list.printList();
+        System.out.println(Arrays.toString(list.toArray()));
         System.out.println(list.indexOf(100));
         System.out.println(list.contains(1));
         System.out.println(list.size());

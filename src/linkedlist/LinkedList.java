@@ -97,13 +97,16 @@ public class LinkedList<T> {
         return size;
     }
 
-    public void printList(){
+    public int[] toArray(){
+        int array[]=new int[size];
+        int index=0;
         var current=first;
         while (current!=null){
-            System.out.print(current.item+" ");
+            array[index++]=current.item;
             current=current.next;
         }
-        System.out.println();
+
+        return array;
     }
 
     private boolean isEmpty(){
