@@ -54,6 +54,7 @@ public class LinkedList<T> {
 
         if(first==last){
             first=last=null;
+            return;
         }else {
             var second=first.next;
             first.next=null;
@@ -68,6 +69,7 @@ public class LinkedList<T> {
 
         if(first==last){
             first=last=null;
+            return;
         }else {
             var previous=getPrevious(last);//O(n)
             previous.next=null;
