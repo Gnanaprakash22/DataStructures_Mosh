@@ -1,3 +1,4 @@
+import linkedlist.DoublyLinkedList;
 import linkedlist.LinkedList;
 
 import java.util.Arrays;
@@ -28,13 +29,28 @@ public class Main {
 //        System.out.println(numbers.indexOf(100));
 //        numbers.removeAt(10);
 
-        LinkedList<Integer> list=new LinkedList<>();
+//        LinkedList<Integer> list=new LinkedList<>();
+//        list.addLast(10);
+//        list.addLast(20);
+//        list.addLast(30);
+//        list.addFirst(50);
+//        list.addFirst(60);
+//        list.addFirst(70);
+//        list.deleteFirst();
+//        list.deleteLast();
+//        System.out.println(Arrays.toString(list.toArray()));
+//        System.out.println(list.indexOf(100));
+//        System.out.println(list.contains(1));
+//        System.out.println(list.size());
+
+        DoublyLinkedList<Integer> list=new DoublyLinkedList<>();
         list.addLast(10);
         list.addLast(20);
         list.addLast(30);
         list.addFirst(50);
         list.addFirst(60);
         list.addFirst(70);
+        System.out.println(Arrays.toString(list.toArray()));
         list.deleteFirst();
         list.deleteLast();
         System.out.println(Arrays.toString(list.toArray()));
