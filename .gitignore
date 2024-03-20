@@ -3,6 +3,7 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .idea
+DataStructures_Mosh.iml
 
 ### Eclipse ###
 .apt_generated
