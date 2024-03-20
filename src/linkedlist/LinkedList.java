@@ -1,5 +1,7 @@
 package linkedlist;
 
+import java.util.NoSuchElementException;
+
 public class LinkedList<T> {
     private Node first;
     private Node last;
@@ -48,7 +50,7 @@ public class LinkedList<T> {
 
     public void deleteFirst(){
         if(isEmpty())
-            throw new RuntimeException("List is empty");
+            throw new NoSuchElementException();
 
         if(first==last){
             first=last=null;
@@ -62,7 +64,7 @@ public class LinkedList<T> {
 
     public void deleteLast(){
         if(isEmpty())
-            throw new RuntimeException("List is empty");
+            throw new NoSuchElementException();
 
         if(first==last){
             first=last=null;
