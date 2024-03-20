@@ -41,5 +41,6 @@ public class Main {
         list.printList();
         System.out.println(list.indexOf(100));
         System.out.println(list.contains(1));
+        System.out.println(list.size());
     }
 }
