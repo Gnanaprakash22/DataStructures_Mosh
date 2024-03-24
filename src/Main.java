@@ -1,4 +1,4 @@
-import stack.array.Stack;
+import stack.linkedlist.Stack;
 
 public class Main {
     public static void main(String[] args) {
@@ -63,14 +63,25 @@ public class Main {
 //        System.out.println(reverser.reverse("Nasdaq"));
 //        BalancedExpression exp=new BalancedExpression();
 //        System.out.println(exp.isBalanced("(1+2}"));
-        Stack stack=new Stack(5);
+//        Stack stack=new Stack(5);
+//        stack.push(10);
+//        stack.push(20);
+//        stack.push(30);
+//        stack.push(40);
+//        stack.push(50);
+//
+//        System.out.println(stack);
+//        System.out.println(stack.pop());
+//        System.out.println(stack.peek());
+//        System.out.println(stack.peek());
+
+        Stack stack=new Stack();
         stack.push(10);
         stack.push(20);
         stack.push(30);
         stack.push(40);
         stack.push(50);
 
-        System.out.println(stack);
         System.out.println(stack.pop());
         System.out.println(stack.peek());
         System.out.println(stack.peek());
