@@ -1,7 +1,4 @@
-import linkedlist.DoublyLinkedList;
-import linkedlist.LinkedList;
-
-import java.util.Arrays;
+import stack.array.Stack;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,24 +26,24 @@ public class Main {
 //        System.out.println(numbers.indexOf(100));
 //        numbers.removeAt(10);
 
-        LinkedList<Integer> list=new LinkedList<>();
-        list.addLast(10);
-        list.addLast(20);
-        list.addLast(30);
-        list.addFirst(50);
-        list.addFirst(60);
-        list.addFirst(70);
-        list.deleteFirst();
-        list.deleteLast();
-        System.out.println(Arrays.toString(list.toArray()));
-        System.out.println(list.indexOf(100));
-        System.out.println(list.contains(1));
-        System.out.println(list.size());
-        list.reverse();
-        System.out.println(Arrays.toString(list.toArray()));
-        System.out.println(list.getKthNodeFromEnd(3));
-        list.printMiddle();
-        System.out.println(list.hasLoop());
+//        LinkedList<Integer> list=new LinkedList<>();
+//        list.addLast(10);
+//        list.addLast(20);
+//        list.addLast(30);
+//        list.addFirst(50);
+//        list.addFirst(60);
+//        list.addFirst(70);
+//        list.deleteFirst();
+//        list.deleteLast();
+//        System.out.println(Arrays.toString(list.toArray()));
+//        System.out.println(list.indexOf(100));
+//        System.out.println(list.contains(1));
+//        System.out.println(list.size());
+//        list.reverse();
+//        System.out.println(Arrays.toString(list.toArray()));
+//        System.out.println(list.getKthNodeFromEnd(3));
+//        list.printMiddle();
+//        System.out.println(list.hasLoop());
 //        DoublyLinkedList<Integer> list=new DoublyLinkedList<>();
 //        list.addLast(10);
 //        list.addLast(20);
@@ -61,5 +58,22 @@ public class Main {
 //        System.out.println(list.indexOf(100));
 //        System.out.println(list.contains(1));
 //        System.out.println(list.size());
+
+//        StringReverser reverser=new StringReverser();
+//        System.out.println(reverser.reverse("Nasdaq"));
+//        BalancedExpression exp=new BalancedExpression();
+//        System.out.println(exp.isBalanced("(1+2}"));
+        Stack stack=new Stack(5);
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        stack.push(40);
+        stack.push(50);
+
+        System.out.println(stack);
+        System.out.println(stack.pop());
+        System.out.println(stack.peek());
+        System.out.println(stack.peek());
+
     }
 }

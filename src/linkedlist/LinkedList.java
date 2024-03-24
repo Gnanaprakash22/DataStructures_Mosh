@@ -1,6 +1,5 @@
 package linkedlist;
 
-import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public class LinkedList<T> {
