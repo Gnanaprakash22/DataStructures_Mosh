@@ -1,4 +1,4 @@
-import stack.linkedlist.Stack;
+import queue.ArrayQueue;
 
 public class Main {
     public static void main(String[] args) {
@@ -75,16 +75,62 @@ public class Main {
 //        System.out.println(stack.peek());
 //        System.out.println(stack.peek());
 
-        Stack stack=new Stack();
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
-        stack.push(40);
-        stack.push(50);
+//        Stack stack=new Stack();
+//        stack.push(10);
+//        stack.push(20);
+//        stack.push(30);
+//        stack.push(40);
+//        stack.push(50);
+//
+//        System.out.println(stack.pop());
+//        System.out.println(stack.peek());
+//        System.out.println(stack.peek());
 
-        System.out.println(stack.pop());
-        System.out.println(stack.peek());
-        System.out.println(stack.peek());
+//        TwoStacks stack=new TwoStacks();
+//        stack.push1(10);
+//        stack.push1(20);
+//        stack.push2(30);
+//        stack.push2(40);
+//        stack.push1(50);
+//
+//        System.out.println(stack.pop2());
+//        System.out.println(stack.pop2());
+//        System.out.println(stack);
+//
+//        MinStack stack=new MinStack();
+//        stack.push(2);
+//        stack.push(1);
+//        stack.push(5);
+//        stack.push(10);
+//
+//        System.out.println(stack.min());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.min());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.min());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.min());
 
+//        Queue<Integer>queue=new ArrayDeque<>();
+//        queue.add(10);
+//        queue.add(20);
+//        queue.add(30);
+//        QueueReverser queueReverser=new QueueReverser();
+//        queueReverser.reverse(queue);
+//        System.out.println(queue);
+
+        ArrayQueue queue=new ArrayQueue(5);
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        System.out.println(queue.peek());
+        queue.enqueue(40);
+        queue.enqueue(50);
+        System.out.println(queue.dequeue());
+        queue.enqueue(60);
+        System.out.println(queue.dequeue());
+        queue.enqueue(70);
+        System.out.println(queue.peek());
+        System.out.println(queue);
     }
 }
