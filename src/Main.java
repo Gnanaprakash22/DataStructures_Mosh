@@ -1,4 +1,9 @@
-import queue.ArrayQueue;
+import hashtable.CharFinder;
+import queue.exercises.LinkedListQueue;
+import queue.exercises.StackWithTwoQueues;
+
+import java.util.Arrays;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -119,18 +124,83 @@ public class Main {
 //        queueReverser.reverse(queue);
 //        System.out.println(queue);
 
-        ArrayQueue queue=new ArrayQueue(5);
-        queue.enqueue(10);
-        queue.enqueue(20);
-        queue.enqueue(30);
-        System.out.println(queue.peek());
-        queue.enqueue(40);
-        queue.enqueue(50);
-        System.out.println(queue.dequeue());
-        queue.enqueue(60);
-        System.out.println(queue.dequeue());
-        queue.enqueue(70);
-        System.out.println(queue.peek());
-        System.out.println(queue);
+//        ArrayQueue queue=new ArrayQueue(5);
+//        queue.enqueue(10);
+//        queue.enqueue(20);
+//        queue.enqueue(30);
+//        System.out.println(queue.peek());
+//        queue.enqueue(40);
+//        queue.enqueue(50);
+//        System.out.println(queue.dequeue());
+//        queue.enqueue(60);
+//        System.out.println(queue.dequeue());
+//        queue.enqueue(70);
+//        System.out.println(queue.peek());
+//        System.out.println(queue);
+
+//        QueueUsingStack queue=new QueueUsingStack();
+//        queue.enqueue(10);
+//        queue.enqueue(20);
+//        queue.enqueue(30);
+//        System.out.println(queue.peek());
+//        System.out.println(queue.dequeue());
+//        queue.enqueue(40);
+//        System.out.println(queue.dequeue());
+//        queue.enqueue(50);
+//        System.out.println(queue.dequeue());
+//        System.out.println(queue.peek());
+
+//        PriorityQueue queue=new PriorityQueue(5);
+//        queue.add(3);
+//        queue.add(1);
+//        queue.add(5);
+//        queue.add(2);
+//        queue.add(7);
+//        System.out.println(queue);
+//        while (!queue.isEmpty())
+//            System.out.println(queue.remove());
+
+//        QueueReverser reverser=new QueueReverser();
+//        Queue<Integer>queue=new ArrayDeque<>();
+//        queue.add(10);
+//        queue.add(20);
+//        queue.add(30);
+//        queue.add(40);
+//        queue.add(50);
+//        System.out.println(queue);
+//        reverser.reverse(5,queue);
+//        System.out.println(queue);
+
+//        LinkedListQueue queue=new LinkedListQueue();
+//        queue.enqueue(10);
+//        queue.enqueue(20);
+//        queue.enqueue(30);
+//        System.out.println(Arrays.toString(queue.toArray()));
+//        System.out.println(queue.dequeue());
+//        System.out.println(queue.size());
+//        System.out.println(queue.peek());
+//        System.out.println(queue.isEmpty());
+
+//        StackWithTwoQueues stack=new StackWithTwoQueues();
+//        stack.push(10);
+//        stack.push(20);
+//        stack.push(30);
+//        stack.push(40);
+//        stack.push(50);
+
+//        System.out.println(stack.isEmpty());
+//        System.out.println(stack.peek());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.peek());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.peek());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.peek());
+
+        CharFinder finder=new CharFinder();
+//        var ch=finder.findFirstNonRepeatingChar("a green apple");
+//        System.out.println(ch);
+        var ch1=finder.findFirstRepeatingChar("green apple");
+        System.out.println(ch1);
     }
 }
