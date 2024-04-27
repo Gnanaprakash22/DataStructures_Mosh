@@ -2,7 +2,7 @@ package linkedlist;
 
 import java.util.NoSuchElementException;
 
-public class LinkedList<T> {
+public class DoublyLinkedList<T> {
     private Node first;
     private Node last;
 
@@ -10,6 +10,7 @@ public class LinkedList<T> {
 
     private class Node{
         private Node next;
+        private Node previous;
         private int item;
 
         Node(int item) {
@@ -29,8 +30,8 @@ public class LinkedList<T> {
             first=last=node;
         }else {
             last.next=node;
+            node.previous=last;
             last=node;
-            last.next=null;
         }
         size++;
     }
@@ -44,6 +45,7 @@ public class LinkedList<T> {
             var second=first;
             first=node;
             first.next=second;
+            second.previous=first;
         }
         size++;
     }
@@ -58,6 +60,7 @@ public class LinkedList<T> {
             var second=first.next;
             first.next=null;
             first=second;
+            first.previous=null;
         }
         size--;
     }
@@ -69,9 +72,9 @@ public class LinkedList<T> {
         if(first==last){
             first=last=null;
         }else {
-            var previous=getPrevious(last);//O(n)
-            previous.next=null;
-            last=previous;
+            var previousToLastNode=last.previous;//O(1)
+            previousToLastNode.next=null;
+            last=previousToLastNode;
         }
         size--;
     }
@@ -95,88 +98,6 @@ public class LinkedList<T> {
 
     public int size(){
         return size;
-    }
-
-    public void reverse(){
-        if(isEmpty()) return;
-
-        Node p = null;
-        var c=first;
-        Node n;
-
-        while (c.next!=null){
-            n=c.next;
-            c.next=p;
-            p=c;
-            c=n;
-        }
-        last=first;
-        c.next=p;
-        first=c;
-    }
-
-    public int getKthNodeFromEnd(int k){
-        if(isEmpty())
-            throw new IllegalStateException();
-
-        var a=first;
-        var b=first;
-
-        for(int i=0;i<k-1;i++){
-            b=b.next;
-            if(b==null)
-                throw new IllegalArgumentException();
-        }
-
-        while (b!=last){
-            a=a.next;
-            b=b.next;
-        }
-
-        return a.item;
-    }
-
-    public void printMiddle(){
-        if(isEmpty())
-            throw new IllegalStateException();
-
-        var a=first;
-        var b=first;
-
-        //10 20 30
-
-        while (b!=last && b.next!=last){
-            b=b.next.next;
-            a=a.next;
-        }
-
-        if(b==last)
-            System.out.println(a.item);
-        else
-            System.out.println(a.item+","+a.next.item);
-    }
-
-    public boolean hasLoop(){
-        LinkedList list1=new LinkedList();
-        list1.addLast(10);
-        list1.addLast(20);
-        list1.addLast(30);
-        list1.addLast(40);
-        list1.addLast(50);
-//        list1.last.next=list1.first.next.next;
-
-        var slow=list1.first;
-        var fast=list1.first;
-
-        while (fast!=null && fast.next!=null){
-            fast=fast.next.next;
-            slow=slow.next;
-
-            if(fast==slow)
-                return true;
-        }
-
-        return false;
     }
 
     public int[] toArray(){
